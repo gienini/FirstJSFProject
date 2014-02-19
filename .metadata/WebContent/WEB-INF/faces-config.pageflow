@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13928074530480" configfile="/FirstJSF/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="static/FailedLogin" x="338" y="178" id="pf13928114121241" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf13928114121242" path="/static/FailedLogin.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="static/LoginView" x="122" y="370" id="pf13928114121253" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf13928114121254 pf13928114121242" path="/static/LoginView.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="static/Trainer" x="338" y="562" id="pf13928114121255" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf13928114121254" path="/static/Trainer.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="start" x="122" y="1138" id="pf13928164978407" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf13928164978408 pf13928164978409" path="/static/start.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="page1" x="338" y="946" id="pf139281649784010" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf13928164978408" path="/static/page1.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="page2" x="338" y="1330" id="pf139281649784011" referenceLink="//@navigationRule.2/@navigationCase.1/@toViewId|" inlinks="pf13928164978409" path="/static/page2.jsp"/>
+  <links id="pf13928114121254" target="pf13928114121255" source="pf13928114121253" outcome="success"/>
+  <links id="pf13928114121242" target="pf13928114121241" source="pf13928114121253" outcome="failed"/>
+  <links id="pf13928164978408" target="pf139281649784010" source="pf13928164978407" outcome="success" fromaction="#{pageController.processPage1}"/>
+  <links id="pf13928164978409" target="pf139281649784011" source="pf13928164978407" outcome="success" fromaction="#{pageController.processPage2}"/>
+</pageflow:Pageflow>
