@@ -5,7 +5,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
-	<h:outputStylesheet library="css" name="table-style.css" />
+	<h:outputStylesheet library="css" name="/table-style.css" />
 </h:head>
 
 <h:body>
@@ -34,7 +34,7 @@
 			<f:facet name="header">
     				color
 				</f:facet>
-    				#{c.color}
+    			<p class="#{c.color}">	#{c.color}</p>
     		</h:column>
 
 	</h:dataTable>
